@@ -15,36 +15,46 @@ listNode *head = nullptr;
 listNode *tail = nullptr;
 
 struct charNode {
-    char symbol;
+    char data;
     charNode *next;
 };
+
 charNode *charHead = nullptr;
 charNode *charTail = nullptr;
+charNode *elem;
 
 int main() {
 
     int n,m; //m<n
+    char simbolis;
     cout << "Iveskite sveika skaiciu n: ";
     cin >> n;
     cout << "Iveskite gsveika skaiciu m: ";
     cin >> m;
     for (int i = 0; i <= n; i++) {
-        charNode *newNode = new charNode; //kuriamas naujas node simboliui
-        newNode->next = nullptr;
-        charHead->next = newNode;
-        charTail->next = newNode;
+        elem = new charNode (); //kuriamas naujas node simboliui
         cout << "Iveskite simboli: ";
-        cin >> newNode->symbol;
-        cout << endl;
-        newNode->next = newNode;
-        charTail->next = newNode;
-
+        cin >> simbolis;
+        elem->data = simbolis;
+        elem->next = nullptr;
+        if (charHead == nullptr) {
+            //pirmojo mazgo tvarkymas
+            charHead = elem;
+            charTail = elem;
+        } else {//jei sarasas netuscias
+            charTail->next = elem; //paskutinio elem rodykle rodo i nauja paskutini mazga
+            charTail = elem;
+        }
     }
     cout << "Simboliu sarasas: ";
     charNode *currentNode = charHead; //loop'ui eiti per sarasa
-    while(currentNode != nullptr) { //saraso spausdinimas
-        cout << currentNode->symbol << ", ";
-        currentNode = currentNode->next;
+    if (charHead == nullptr ) {
+        cout << "Sarasas yra tuscias.\n";
+    }else {
+        while(currentNode != nullptr) { //saraso spausdinimas
+            cout << currentNode->data << ", ";
+            currentNode = currentNode->next;
+        }
     }
 
 
