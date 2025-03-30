@@ -1,0 +1,3 @@
+C:/Users/Ieva/Algorithms-and-Data-Structures-course/PD1/cmake-build-debug/CMakeFiles/praktine_uzduotis.dir
+C:/Users/Ieva/Algorithms-and-Data-Structures-course/PD1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ieva/Algorithms-and-Data-Structures-course/PD1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
